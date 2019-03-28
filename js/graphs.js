@@ -7,6 +7,7 @@ function graphCreation(error, hrDataset) {
     var ndx = crossfilter(hrDataset);
 
     maleFemale_Ratio(ndx);
+    maleFemalePay_Ratio(ndx);
 
     dc.renderAll();
 }
@@ -29,10 +30,30 @@ function maleFemale_Ratio(ndx) {
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("Female / Male Ratio")
         .colorAccessor(function(d) {
             return d.key[2];
         })
         .colors(genderColors)
         .yAxis().ticks(10);
+}
+
+function maleFemalePay_Ratio(ndx) {
+    var genderColors = d3.scale.ordinal()
+        .domain(['Female', 'Male'])
+        .range(['Orchid', 'SpringGreen']);
+
+    var dim = ndx.dimension(dc.pluck('Sex'))
+    var group = dim.group();
+    var payRatio = dim.group().reduceSum(dc.pluck('PayRate'));
+
+    dc.pieChart('#maleFemalePayBarChart')
+        .height(350)
+        .radius(200)
+        .transitionDuration(1500)
+        .dimension(dim)
+        .group(payRatio)
+        .colorAccessor(function(d) {
+            return d.key[2];
+        })
+        .colors(genderColors)
 }
