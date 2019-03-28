@@ -10,6 +10,7 @@ function graphCreation(error, hrDataset) {
     maleFemale_Ratio(ndx);
     maleFemalePay_Ratio(ndx);
     maleFemaleJobtype_Ratio(ndx);
+    maleFemaleMarital_Ratio(ndx);
 
     dc.renderAll();
 }
@@ -107,6 +108,60 @@ function maleFemaleJobtype_Ratio(ndx) {
         .stack(JobRatioAdmin, 'Admin Offices')
         .stack(JobRatioSoftware, 'Software Engineering')
         .stack(JobRatioExecutive, 'Executive Office')
+        .valueAccessor(function(d) {
+            if (d.value.total > 0) {
+                return (d.value.match / d.value.total) * 100;
+            }
+            else {
+                return 0;
+            }
+        })
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
+        .margins({ top: 10, right: 100, bottom: 30, left: 30 });
+}
+
+function maleFemaleMarital_Ratio(ndx) {
+
+    function RatioByStatus(dimension, MaritalDesc) {
+        return dimension.group().reduce(
+            function(p, v) {
+                p.total++;
+                if (v.MaritalDesc == MaritalDesc) {
+                    p.match++;
+                }
+                return p;
+            },
+            function(p, v) {
+                p.total--;
+                if (v.MaritalDesc == MaritalDesc) {
+                    p.match--;
+                }
+                return p;
+            },
+            function() {
+                return { total: 0, match: 0 };
+            }
+        );
+    }
+    var dim = ndx.dimension(dc.pluck('Sex'));
+    var MarrigeRatioMarried = RatioByStatus(dim, "Married");
+    var MarrigeRatioDivorced = RatioByStatus(dim, "Divorced");
+    var MarrigeRatioSeparated = RatioByStatus(dim, "Separated");
+    var MarrigeRatioSingle = RatioByStatus(dim, "Single");
+    var MarrigeRatioWidowed = RatioByStatus(dim, "widowed");
+
+
+    dc.barChart('#maleFemaleMarital')
+        .width(400)
+        .height(300)
+        .dimension(dim)
+        .group(MarrigeRatioMarried, 'Married')
+        .stack(MarrigeRatioDivorced, 'Divorced')
+        .stack(MarrigeRatioSeparated, 'Separated')
+        .stack(MarrigeRatioSingle, 'Single')
+        .stack(MarrigeRatioWidowed, 'widowed')
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
                 return (d.value.match / d.value.total) * 100;
