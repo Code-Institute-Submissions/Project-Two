@@ -6,6 +6,7 @@ queue()
 function graphCreation(error, hrDataset) {
     var ndx = crossfilter(hrDataset);
 
+    gender_selector(ndx);
     maleFemale_Ratio(ndx);
     maleFemalePay_Ratio(ndx);
     maleFemaleJobtype_Ratio(ndx);
@@ -13,6 +14,14 @@ function graphCreation(error, hrDataset) {
     dc.renderAll();
 }
 
+function gender_selector(ndx) {
+    dim = ndx.dimension(dc.pluck('Sex'));
+    group = dim.group()
+
+    dc.selectMenu('#genderSelector')
+        .dimension(dim)
+        .group(group);
+}
 
 function maleFemale_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
