@@ -11,6 +11,7 @@ function graphCreation(error, hrDataset) {
     maleFemalePay_Ratio(ndx);
     maleFemaleJobtype_Ratio(ndx);
     maleFemaleMarital_Ratio(ndx);
+    age_pay_ratio(ndx);
 
     dc.renderAll();
 }
@@ -174,4 +175,40 @@ function maleFemaleMarital_Ratio(ndx) {
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
         .margins({ top: 10, right: 100, bottom: 30, left: 30 });
+}
+
+
+function age_pay_ratio(ndx) {
+    var sexColor = d3.scale.ordinal()
+        .domain(['Female', 'Male'])
+        .range(['orange', 'red']);
+
+    var AgeDim = ndx.dimension(dc.pluck('Age'));
+    var payDim = ndx.dimension(function(d) {
+        return [d.Age, d.PayRate, d.Sex];
+    });
+    var AgeToPayGroup = payDim.group();
+
+    var minAge = AgeDim.bottom(1)[0].Age;
+    var maxAge = AgeDim.top(1)[0].Age;
+
+    dc.scatterPlot('#agePayScatter')
+        .width(800)
+        .height(400)
+        .x(d3.scale.linear().domain([minAge, maxAge]))
+        .brushOn(false)
+        .symbolSize(8)
+        .clipPadding(10)
+        .yAxisLabel('Pay Rate')
+        .xAxisLabel('Age')
+        .title(function(d) {
+            return 'earned' + d.key[1];
+        })
+        .colorAccessor(function(d) {
+            return d.key[2];
+        })
+        .colors(sexColor)
+        .dimension(payDim)
+        .group(AgeToPayGroup)
+        .margins({ top: 10, right: 10, bottom: 75, left: 75 });
 }
