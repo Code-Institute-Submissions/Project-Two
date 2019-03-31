@@ -9,6 +9,7 @@ function graphCreation(error, hrDataset) {
     gender_selector(ndx);
     maleFemale_Ratio(ndx);
     maleFemalePay_Ratio(ndx);
+    EmploymentStatus_Ratio(ndx);
     maleFemaleJobtype_Ratio(ndx);
     maleFemaleMarital_Ratio(ndx);
     age_pay_ratio(ndx);
@@ -28,7 +29,7 @@ function gender_selector(ndx) {
 function maleFemale_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
-        .range(['Orchid', 'SpringGreen']);
+        .range(['#9467BD', '#1F77B4']);
 
     var dim = ndx.dimension(dc.pluck('Sex'))
     var group = dim.group();
@@ -52,7 +53,7 @@ function maleFemale_Ratio(ndx) {
 function maleFemalePay_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
-        .range(['Orchid', 'SpringGreen']);
+        .range(['#9467BD', '#1F77B4']);
 
     var dim = ndx.dimension(dc.pluck('Sex'))
     var group = dim.group();
@@ -68,6 +69,18 @@ function maleFemalePay_Ratio(ndx) {
             return d.key[2];
         })
         .colors(genderColors)
+}
+
+function EmploymentStatus_Ratio(ndx) {
+    var dim = ndx.dimension(dc.pluck('Employment Status'))
+    var group = dim.group();
+
+    dc.pieChart('#employmentStatusPieChart')
+        .height(350)
+        .radius(200)
+        .transitionDuration(1500)
+        .dimension(dim)
+        .group(group);
 }
 
 function maleFemaleJobtype_Ratio(ndx) {
@@ -179,9 +192,9 @@ function maleFemaleMarital_Ratio(ndx) {
 
 
 function age_pay_ratio(ndx) {
-    var sexColor = d3.scale.ordinal()
+    var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
-        .range(['orange', 'red']);
+        .range(['#9467BD', '#1F77B4']);
 
     var AgeDim = ndx.dimension(dc.pluck('Age'));
     var payDim = ndx.dimension(function(d) {
@@ -207,7 +220,7 @@ function age_pay_ratio(ndx) {
         .colorAccessor(function(d) {
             return d.key[2];
         })
-        .colors(sexColor)
+        .colors(genderColors)
         .dimension(payDim)
         .group(AgeToPayGroup)
         .margins({ top: 10, right: 10, bottom: 75, left: 75 });
