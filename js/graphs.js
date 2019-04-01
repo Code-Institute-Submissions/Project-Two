@@ -13,7 +13,6 @@ function graphCreation(error, hrDataset) {
     maleFemaleJobtype_Ratio(ndx);
     maleFemaleMarital_Ratio(ndx);
     age_pay_ratio(ndx);
-    age_job_ratio(ndx);
 
     dc.renderAll();
 }
@@ -227,37 +226,3 @@ function age_pay_ratio(ndx) {
         .margins({ top: 10, right: 10, bottom: 75, left: 75 });
 }
 
-function age_job_ratio(ndx) {
-    var genderColors = d3.scale.ordinal()
-        .domain(['Female', 'Male'])
-        .range(['#9467BD', '#1F77B4']);
-
-    var AgeDim = ndx.dimension(dc.pluck('Age'));
-    var jobDim = ndx.dimension(function(d) {
-        return [d.Age, d.Department, d.Sex];
-    });
-    var AgeToJobGroup = jobDim.group();
-
-    var minAge = AgeDim.bottom(1)[0].Age;
-    var maxAge = AgeDim.top(1)[0].Age;
-
-    dc.scatterPlot('#ageJobScatter')
-        .width(800)
-        .height(400)
-        .x(d3.scale.linear().domain([minAge, maxAge]))
-        .brushOn(false)
-        .symbolSize(8)
-        .clipPadding(10)
-        .yAxisLabel('Job Type')
-        .xAxisLabel('Age')
-        .title(function(d) {
-            return 'earned' + d.key[1];
-        })
-        .colorAccessor(function(d) {
-            return d.key[2];
-        })
-        .colors(genderColors)
-        .dimension(jobDim)
-        .group(AgeToJobGroup)
-        .margins({ top: 10, right: 10, bottom: 75, left: 75 });
-}
