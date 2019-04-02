@@ -35,7 +35,7 @@ function maleFemale_Ratio(ndx) {
     var group = dim.group();
 
     dc.barChart("#maleFemaleBarChart")
-        .width(350)
+        .width(400)
         .height(350)
         .margins({ top: 10, right: 50, bottom: 50, left: 50 })
         .dimension(dim)
@@ -61,7 +61,7 @@ function maleFemalePay_Ratio(ndx) {
 
     dc.pieChart('#maleFemalePayBarChart')
         .height(350)
-        .radius(200)
+        .radius(150)
         .transitionDuration(1500)
         .dimension(dim)
         .group(payRatio)
@@ -77,7 +77,7 @@ function EmploymentStatus_Ratio(ndx) {
 
     dc.pieChart('#employmentStatusPieChart')
         .height(350)
-        .radius(200)
+        .radius(150)
         .transitionDuration(1500)
         .dimension(dim)
         .group(group);
@@ -115,7 +115,7 @@ function maleFemaleJobtype_Ratio(ndx) {
 
     dc.barChart('#maleFemaleJobStackedBarChart')
         .width(400)
-        .height(300)
+        .height(350)
         .dimension(dim)
         .group(JobRatioSales, 'Sales')
         .stack(JobRatioIT, 'IT/IS')
@@ -169,7 +169,7 @@ function maleFemaleMarital_Ratio(ndx) {
 
     dc.barChart('#maleFemaleMarital')
         .width(400)
-        .height(300)
+        .height(350)
         .dimension(dim)
         .group(MarrigeRatioMarried, 'Married')
         .stack(MarrigeRatioDivorced, 'Divorced')
@@ -206,7 +206,7 @@ function age_pay_ratio(ndx) {
     var maxAge = AgeDim.top(1)[0].Age;
 
     dc.scatterPlot('#agePayScatter')
-        .width(800)
+        .width(700)
         .height(400)
         .x(d3.scale.linear().domain([minAge, maxAge]))
         .brushOn(false)

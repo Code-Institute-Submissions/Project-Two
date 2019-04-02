@@ -16,29 +16,32 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script type="text/javascript" src="js/graphs.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="styling/main.css" type="text/css" />
 </head>
 
 <body>
-    <div class="dashboard-wrapper container">
+    <div class="dashboard-wrapper container-fluid">
         <div class="row">
             <h1>Human Resource Data Results</h1>
-            <div id="genderSelector" class="col-md-12"></div>
-            <div id="maleFemaleBarChart" class="col-md-4">
+            <div id="genderSelector" class="col-md-12 "></div>
+            <div id="maleFemaleBarChart" class="col-md-4 graphDiv">
                 <h2>Male / Female Ratio</h2>
             </div>
-            <div id="maleFemalePayBarChart" class="col-md-4">
+            <div id="maleFemalePayBarChart" class="col-md-4 graphDiv">
                 <h2>Male / Female Total Pay Ratio</h2>
             </div>
-            <div id="employmentStatusPieChart" class="col-md-4">
+            <div id="employmentStatusPieChart" class="col-md-4 graphDiv">
                 <h2>Employment Status Ratio</h2>
             </div>
-            <div id="maleFemaleJobStackedBarChart" class="col-md-4">
+            <div id="maleFemaleJobStackedBarChart" class="col-md-3 graphDiv">
                 <h2>Male / Female Jobtype Ratio</h2>
             </div>
-            <div id="maleFemaleMarital" class="col-md-4">
+            <div id="maleFemaleMarital" class="col-md-3 graphDiv">
                 <h2>Male / Female Marital Status</h2>
             </div>
-            <div id="agePayScatter" class="col-md-4">
+            <div id="agePayScatter" class="col-md-6 graphDiv">
                 <h2>Age / Pay Ratio</h2>
             </div>
         </div>
