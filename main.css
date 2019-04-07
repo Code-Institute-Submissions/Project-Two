@@ -1,9 +1,6 @@
 body {
   background-color: #D2CDD5;
-  overflow-x: hidden;
-  margin: 0 auto;
-  text-align: center;
-  width: 98%; }
+  overflow-x: hidden; }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
@@ -19,10 +16,6 @@ h1 {
   padding: 5px;
   color: #000000; }
 
-div {
-  text-align: center;
-  padding: 4px; }
-
 .graphDiv {
   border: 1px solid black;
   border-radius: 14px 14px 14px 14px;
@@ -30,6 +23,44 @@ div {
   -webkit-border-radius: 14px 14px 14px 14px;
   background-color: #ffffff;
   text-align: center;
-  padding: 4px; }
+  flex-basis: 25%;
+  margin: 10px; }
+
+.selectorContainer {
+  display: flex; }
+
+.graphContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.genderBar {
+  order: 1;
+  flex: 1; }
+
+.payBar {
+  order: 3;
+  flex: 1; }
+
+.employmentPie {
+  order: 2;
+  flex: 1; }
+
+.graphContainerTwo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.jobStacked {
+  order: 1;
+  flex: 1; }
+
+.meritalStacked {
+  order: 3;
+  flex: 1; }
+
+.ageScatter {
+  order: 2;
+  flex: 1; }
 
 /*# sourceMappingURL=main.css.map */
