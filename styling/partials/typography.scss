@@ -14,3 +14,9 @@
     padding: 5px;
     color: $mainFont;
 }
+
+@mixin introFont {
+    font-family: 'ZCOOL XiaoWei', serif;
+    text-align: center;
+    line-height: 150%;
+}

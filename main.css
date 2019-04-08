@@ -17,6 +17,11 @@ h1 {
   padding: 5px;
   color: #000000; }
 
+p {
+  font-family: 'ZCOOL XiaoWei', serif;
+  text-align: center;
+  line-height: 150%; }
+
 .graphDiv {
   border: 1px solid black;
   border-radius: 14px 14px 14px 14px;
@@ -25,27 +30,29 @@ h1 {
   background-color: #ffffff;
   text-align: center;
   flex-basis: 25%;
-  margin: 10px; }
+  margin: 10px;
+  padding: 5px; }
 
 .selectorContainer {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .graphContainer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; }
 
-.genderBar {
-  order: 1;
-  flex: 1; }
-
-.payBar {
-  order: 3;
-  flex: 1; }
-
-.employmentPie {
+.introDiv {
   order: 2;
   flex: 1; }
+
+.genderBar {
+  order: 1;
+  flex: 2; }
+
+.payBar {
+  order: 4;
+  flex: 2; }
 
 .graphContainerTwo {
   display: flex;
@@ -62,6 +69,10 @@ h1 {
 
 .ageScatter {
   order: 2;
+  flex: 1; }
+
+.employmentPie {
+  order: 3;
   flex: 1; }
 
 /*# sourceMappingURL=main.css.map */

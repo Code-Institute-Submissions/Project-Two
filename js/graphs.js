@@ -7,6 +7,8 @@ function graphCreation(error, hrDataset) {
     var ndx = crossfilter(hrDataset);
 
     gender_selector(ndx);
+    department_selector(ndx);
+    race_selector(ndx);
     maleFemale_Ratio(ndx);
     maleFemalePay_Ratio(ndx);
     EmploymentStatus_Ratio(ndx);
@@ -22,6 +24,24 @@ function gender_selector(ndx) {
     group = dim.group()
 
     dc.selectMenu('#genderSelector')
+        .dimension(dim)
+        .group(group);
+}
+
+function department_selector(ndx) {
+    dim = ndx.dimension(dc.pluck('Department'));
+    group = dim.group()
+
+    dc.selectMenu('#departmentSelector')
+        .dimension(dim)
+        .group(group);
+}
+
+function race_selector(ndx) {
+    dim = ndx.dimension(dc.pluck('RaceDesc'));
+    group = dim.group()
+
+    dc.selectMenu('#raceSelector')
         .dimension(dim)
         .group(group);
 }
@@ -225,4 +245,3 @@ function age_pay_ratio(ndx) {
         .group(AgeToPayGroup)
         .margins({ top: 10, right: 10, bottom: 75, left: 75 });
 }
-

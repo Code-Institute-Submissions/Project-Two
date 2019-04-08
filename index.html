@@ -22,19 +22,25 @@
 <body>
     <h1>Human Resource Data Results</h1>
 
-    <div class="selectorContainer">
-        <div id="genderSelector" class="genderMenu"></div>
-    </div>
-
     <div class="graphContainer">
+
+        <div class="introDiv graphDiv">
+            <h3>Welcome to the Human Resource Dataset Outcome</h3>
+            <p>In this data dashboard you will find the outcome of Dr. Carla Patalano & Dr. Rich's reseach of the employees within the company 'Dental Magic'.
+                <br/><br/> To further study this topic please visit <a href="https://www.kaggle.com/rhuebner/human-resources-data-set" target="_blank">Here</a>
+                <br/><br/> Please use selectors below to toggle results.</p>
+
+            <div class="selectorContainer">
+                <div id="genderSelector" class="genderMenu"></div><br/>
+                <div id="departmentSelector" class="genderMenu"></div><br/>
+                <div id="raceSelector" class="genderMenu"></div><br/>
+            </div>
+        </div>
         <div id="maleFemaleBarChart" class="graphDiv genderBar">
             <h2>Male / Female Ratio</h2>
         </div>
         <div id="maleFemalePayBarChart" class="graphDiv payBar">
             <h2>Male / Female Total Pay Ratio</h2>
-        </div>
-        <div id="employmentStatusPieChart" class="graphDiv employmentPie">
-            <h2>Employment Status Ratio</h2>
         </div>
     </div>
     <div class="graphContainerTwo">
@@ -46,6 +52,9 @@
         </div>
         <div id="agePayScatter" class="graphDiv ageScatter">
             <h2>Age / Pay Ratio</h2>
+        </div>
+        <div id="employmentStatusPieChart" class="graphDiv employmentPie">
+            <h2>Employment Status Ratio</h2>
         </div>
     </div>
 
