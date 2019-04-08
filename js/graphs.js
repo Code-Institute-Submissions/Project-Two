@@ -61,7 +61,7 @@ function maleFemalePay_Ratio(ndx) {
 
     dc.pieChart('#maleFemalePayBarChart')
         .height(300)
-        .radius(100)
+        .radius(120)
         .transitionDuration(1500)
         .dimension(dim)
         .group(payRatio)
@@ -77,7 +77,7 @@ function EmploymentStatus_Ratio(ndx) {
 
     dc.pieChart('#employmentStatusPieChart')
         .height(300)
-        .radius(100)
+        .radius(120)
         .transitionDuration(1500)
         .dimension(dim)
         .group(group);

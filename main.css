@@ -3,16 +3,17 @@ body {
   overflow-x: hidden; }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'ZCOOL XiaoWei', serif;
   text-align: center;
   text-transform: capitalize;
-  font-size: 20px;
-  font-weight: bold; }
+  font-size: 27px;
+  font-weight: bolder; }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Russo One', sans-serif;
   margin: 0 auto;
-  font-weight: 800;
+  text-align: center;
+  font-size: 48px;
   padding: 5px;
   color: #000000; }
 
