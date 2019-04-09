@@ -55,9 +55,9 @@ function maleFemale_Ratio(ndx) {
     var group = dim.group();
 
     dc.barChart("#maleFemaleBarChart")
-        .width(350)
+        .width(400)
         .height(300)
-        .margins({ top: 10, right: 50, bottom: 50, left: 50 })
+        .margins({ top: 10, right: 50, bottom: 20, left: 50 })
         .dimension(dim)
         .group(group)
         .transitionDuration(1500)
@@ -81,7 +81,7 @@ function maleFemalePay_Ratio(ndx) {
 
     dc.pieChart('#maleFemalePayBarChart')
         .height(300)
-        .radius(120)
+        .radius(140)
         .transitionDuration(1500)
         .dimension(dim)
         .group(payRatio)
@@ -97,7 +97,7 @@ function EmploymentStatus_Ratio(ndx) {
 
     dc.pieChart('#employmentStatusPieChart')
         .height(300)
-        .radius(120)
+        .radius(140)
         .transitionDuration(1500)
         .dimension(dim)
         .group(group);
@@ -134,7 +134,7 @@ function maleFemaleJobtype_Ratio(ndx) {
     var JobRatioExecutive = RatioByGender(dim, "Executive Office");
 
     dc.barChart('#maleFemaleJobStackedBarChart')
-        .width(350)
+        .width(400)
         .height(300)
         .dimension(dim)
         .group(JobRatioSales, 'Sales')
@@ -152,8 +152,8 @@ function maleFemaleJobtype_Ratio(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-        .margins({ top: 10, right: 100, bottom: 30, left: 30 });
+        .legend(dc.legend().x(300).y(20).itemHeight(15).gap(5))
+        .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
 function maleFemaleMarital_Ratio(ndx) {
@@ -188,7 +188,7 @@ function maleFemaleMarital_Ratio(ndx) {
 
 
     dc.barChart('#maleFemaleMarital')
-        .width(350)
+        .width(400)
         .height(300)
         .dimension(dim)
         .group(MarrigeRatioMarried, 'Married')
@@ -206,8 +206,8 @@ function maleFemaleMarital_Ratio(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-        .margins({ top: 10, right: 100, bottom: 30, left: 30 });
+        .legend(dc.legend().x(300).y(20).itemHeight(15).gap(5))
+        .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
 

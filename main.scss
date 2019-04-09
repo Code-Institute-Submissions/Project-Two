@@ -14,6 +14,7 @@ h2 {
 h1 {
     @include pageHeading;
 }
+
 p {
     @include introFont;
 }
@@ -39,19 +40,18 @@ p {
 }
 
 .introDiv {
-    order: 2;
+    order: 1;
     flex: 1;
 }
 
 .genderBar {
-    order: 1;
-    flex: 2;
+    order: 2;
+    flex: 1;
 }
 
-.payBar {
-    order: 4;
+.ageScatter {
+    order: 3;
     flex: 2;
-
 }
 
 
@@ -61,25 +61,26 @@ p {
     flex-wrap: wrap;
 }
 
-.jobStacked {
+.maritalStacked {
     order: 1;
     flex: 1;
 
 }
 
-.meritalStacked {
+.payBar {
     order: 3;
     flex: 1;
 
 }
 
-.ageScatter {
-    order: 2;
-    flex: 1;
+.jobStacked {
+    order: 3;
+    flex: 2;
+
 }
 
 .employmentPie {
-    order: 3;
+    order: 4;
     flex: 1;
 
 }
