@@ -75,4 +75,18 @@ p {
   order: 4;
   flex: 1; }
 
+/* ------- Media Queries---------- */
+@media (max-width: 320px) {
+  body {
+    text-align: center;
+    width: 95%; } }
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 170%; } }
+
+@media (max-width: 320px) {
+  .graphDiv {
+    width: 80%; } }
+
 /*# sourceMappingURL=main.css.map */

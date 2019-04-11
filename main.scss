@@ -1,7 +1,11 @@
 @import "styling/partials/colors";
 @import "styling/partials/typography";
 @import "styling/partials/border";
+@import 'styling/partials/mediaQueries.scss';
+// importing sass partials
 
+
+// basic element styling incorporating mixin includes
 body {
     background-color: $baseBackgroundColor;
     overflow-x: hidden;
@@ -19,6 +23,7 @@ p {
     @include introFont;
 }
 
+// styling on dc charts, selectors and their  containers + intro to flexbox
 .graphDiv {
     @include primaryBorder;
     background-color: $divBackground;
@@ -84,3 +89,4 @@ p {
     flex: 1;
 
 }
+

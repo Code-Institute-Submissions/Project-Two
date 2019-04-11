@@ -19,6 +19,8 @@ function graphCreation(error, hrDataset) {
     dc.renderAll();
 }
 
+// dimension selectors
+
 function gender_selector(ndx) {
     dim = ndx.dimension(dc.pluck('Sex'));
     group = dim.group()
@@ -46,6 +48,9 @@ function race_selector(ndx) {
         .group(group);
 }
 
+// dc bar charts
+
+//gender bar chart
 function maleFemale_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
@@ -54,7 +59,7 @@ function maleFemale_Ratio(ndx) {
     var dim = ndx.dimension(dc.pluck('Sex'))
     var group = dim.group();
 
-    dc.barChart("#maleFemaleBarChart")
+    dc.barChart("#genderRatio")
         .width(400)
         .height(300)
         .margins({ top: 10, right: 50, bottom: 20, left: 50 })
@@ -70,6 +75,7 @@ function maleFemale_Ratio(ndx) {
         .yAxis().ticks(10);
 }
 
+// gender pay ratio pie chart
 function maleFemalePay_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
@@ -79,7 +85,7 @@ function maleFemalePay_Ratio(ndx) {
     var group = dim.group();
     var payRatio = dim.group().reduceSum(dc.pluck('PayRate'));
 
-    dc.pieChart('#maleFemalePayBarChart')
+    dc.pieChart('#genderPayRatio')
         .height(300)
         .radius(140)
         .transitionDuration(1500)
@@ -91,11 +97,12 @@ function maleFemalePay_Ratio(ndx) {
         .colors(genderColors)
 }
 
+// employment status pie chart
 function EmploymentStatus_Ratio(ndx) {
     var dim = ndx.dimension(dc.pluck('Employment Status'))
     var group = dim.group();
 
-    dc.pieChart('#employmentStatusPieChart')
+    dc.pieChart('#employmentRatio')
         .height(300)
         .radius(140)
         .transitionDuration(1500)
@@ -103,6 +110,7 @@ function EmploymentStatus_Ratio(ndx) {
         .group(group);
 }
 
+//gender job type ratio stacked bar chart
 function maleFemaleJobtype_Ratio(ndx) {
 
     function RatioByGender(dimension, Department) {
@@ -133,7 +141,7 @@ function maleFemaleJobtype_Ratio(ndx) {
     var JobRatioSoftware = RatioByGender(dim, "Software Engineering");
     var JobRatioExecutive = RatioByGender(dim, "Executive Office");
 
-    dc.barChart('#maleFemaleJobStackedBarChart')
+    dc.barChart('#genderJobRatio')
         .width(400)
         .height(300)
         .dimension(dim)
@@ -156,6 +164,7 @@ function maleFemaleJobtype_Ratio(ndx) {
         .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
+//marital status ratio stacked bar chart
 function maleFemaleMarital_Ratio(ndx) {
 
     function RatioByStatus(dimension, MaritalDesc) {
@@ -187,7 +196,7 @@ function maleFemaleMarital_Ratio(ndx) {
     var MarrigeRatioWidowed = RatioByStatus(dim, "widowed");
 
 
-    dc.barChart('#maleFemaleMarital')
+    dc.barChart('#maritalRatio')
         .width(400)
         .height(300)
         .dimension(dim)
@@ -210,7 +219,7 @@ function maleFemaleMarital_Ratio(ndx) {
         .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
-
+// gender age to pay ratio scatter graph
 function age_pay_ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
@@ -225,7 +234,7 @@ function age_pay_ratio(ndx) {
     var minAge = AgeDim.bottom(1)[0].Age;
     var maxAge = AgeDim.top(1)[0].Age;
 
-    dc.scatterPlot('#agePayScatter')
+    dc.scatterPlot('#ageToPayRatio')
         .width(650)
         .height(350)
         .x(d3.scale.linear().domain([minAge, maxAge]))
