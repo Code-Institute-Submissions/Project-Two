@@ -241,7 +241,7 @@ function age_pay_ratio(ndx) {
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
-        .yAxisLabel('Pay Rate')
+        .yAxisLabel('Pay Hourly Rate')
         .xAxisLabel('Age')
         .title(function(d) {
             return 'earned' + d.key[1];
