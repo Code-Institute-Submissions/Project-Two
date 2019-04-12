@@ -75,18 +75,54 @@ p {
   order: 4;
   flex: 1; }
 
-/* ------- Media Queries---------- */
 @media (max-width: 320px) {
   body {
-    text-align: center;
-    width: 95%; } }
+    text-align: center; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  body {
+    text-align: center; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  body {
+    text-align: center; } }
 
 @media (max-width: 320px) {
   h1 {
-    font-size: 170%; } }
+    font-size: 190%; } }
 
 @media (max-width: 320px) {
   .graphDiv {
-    width: 80%; } }
+    padding: 3px;
+    overflow-x: scroll;
+    width: 90%; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  .graphDiv {
+    padding: 3px;
+    overflow-x: scroll;
+    width: 90%; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  .graphDiv {
+    padding: 3px;
+    overflow-x: scroll;
+    width: 90%; } }
+
+@media (max-width: 320px) {
+  .graphContainer {
+    flex-direction: column; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  .graphContainer {
+    flex-direction: column; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  .graphContainer {
+    flex-direction: column; } }
+
+@media (max-width: 320px) {
+  .graphContainerTwo {
+    flex-direction: column; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  .graphContainerTwo {
+    flex-direction: column; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  .graphContainerTwo {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=main.css.map */

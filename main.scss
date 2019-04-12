@@ -3,8 +3,6 @@
 @import "styling/partials/border";
 @import 'styling/partials/mediaQueries.scss';
 // importing sass partials
-
-
 // basic element styling incorporating mixin includes
 body {
     background-color: $baseBackgroundColor;
@@ -90,3 +88,66 @@ p {
 
 }
 
+
+// media query styling
+// basic page and typography styling 
+body {
+    @include smartphone {
+        text-align: center;
+    }
+    @include smartphoneMedium {
+        text-align: center;
+    }
+    @include smartphoneLarge {
+        text-align: center;
+    }
+}
+
+h1 {
+    @include smartphone {
+        font-size: 190%;
+    }
+}
+
+// styling charts & their containers
+.graphDiv {
+    @include smartphone {
+        padding: 3px;
+        overflow-x: scroll;
+        width: 90%;
+    }
+    @include smartphoneMedium {
+        padding: 3px;
+        overflow-x: scroll;
+        width: 90%;
+    }
+    @include smartphoneLarge {
+        padding: 3px;
+        overflow-x: scroll;
+        width: 90%;
+    }
+}
+
+.graphContainer {
+    @include smartphone {
+        flex-direction: column;
+    }
+    @include smartphoneMedium {
+        flex-direction: column;
+    }
+    @include smartphoneLarge {
+        flex-direction: column;
+    }
+}
+
+.graphContainerTwo {
+    @include smartphone {
+        flex-direction: column;
+    }
+    @include smartphoneMedium {
+        flex-direction: column;
+    }
+    @include smartphoneLarge {
+        flex-direction: column;
+    }
+}

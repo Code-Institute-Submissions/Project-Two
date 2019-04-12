@@ -21,72 +21,51 @@
 
 <body>
     <!---------- Dashbaord Heading---------->
-    <header>
-        <h1>Human Resource Data Results</h1>
-    </header>
+    <h1>Human Resource Data Results</h1>
     <!---------- /Dashbaord Heading---------->
 
 
     <!---------- Intro, selectors and first 3 graphs---------->
-    <main>
-        <section>
-            <div class="graphContainer">
-                <article>
-                    <div class="introDiv graphDiv">
-                        <h3>Welcome to the Human Resource Dataset Outcome</h3>
-                        <p>In this data dashboard you will find the outcome of Dr. Carla Patalano & Dr. Rich's reseach of the employees within the company 'Dental Magic'.
-                            <br/><br/> To further study this topic please visit <a href="https://www.kaggle.com/rhuebner/human-resources-data-set" target="_blank">Here</a>
-                            <br/><br/> Please use selectors below to toggle results.</p>
+    <div class="graphContainer">
 
-                        <div class="selectorContainer">
-                            <div id="genderSelector" class="genderMenu"></div><br/>
-                            <div id="departmentSelector" class="genderMenu"></div><br/>
-                            <div id="raceSelector" class="genderMenu"></div><br/>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <div id="genderRatio" class="graphDiv genderBar">
-                        <h2>Male / Female Ratio</h2>
-                    </div>
-                </article>
-                <article>
-                    <div id="ageToPayRatio" class="graphDiv ageScatter">
-                        <h2>Age / Pay Ratio</h2>
-                    </div>
-                </article>
+        <div class="introDiv graphDiv">
+            <h3>Welcome to the Human Resource Dataset Outcome</h3>
+            <p>In this data dashboard you will find the outcome of Dr. Carla Patalano & Dr. Rich's reseach of the employees within the company 'Dental Magic'.
+                <br/><br/> To further study this topic please visit <a href="https://www.kaggle.com/rhuebner/human-resources-data-set" target="_blank">Here</a>
+                <br/><br/> Please use selectors below to toggle results.</p>
+
+            <div class="selectorContainer">
+                <div id="genderSelector" class="genderMenu"></div><br/>
+                <div id="departmentSelector" class="genderMenu"></div><br/>
+                <div id="raceSelector" class="genderMenu"></div><br/>
             </div>
-        </section>
-        <!---------- /Intro and first 3 graphs---------->
-
-
-        <!---------- Last 3 graphs---------->
-        <section>
-            <div class="graphContainerTwo">
-                <article>
-                    <div id="maritalRatio" class="graphDiv maritalStacked">
-                        <h2>Male / Female Marital Status</h2>
-                    </div>
-                </article>
-                <article>
-                    <div id="genderPayRatio" class="graphDiv payBar">
-                        <h2>Male / Female Total Pay Ratio</h2>
-                    </div>
-                </article>
-                <article>
-                    <div id="genderJobRatio" class="graphDiv jobStacked">
-                        <h2>Male / Female Jobtype Ratio</h2>
-                    </div>
-                </article>
-                <article>
-                    <div id="employmentRatio" class="graphDiv employmentPie">
-                        <h2>Employment Status Ratio</h2>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <!----------/Last 3 graphs---------->
-    </main>
+        </div>
+        <div id="genderRatio" class="graphDiv genderBar">
+            <h2>Male / Female Ratio</h2>
+        </div>
+        <div id="ageToPayRatio" class="graphDiv ageScatter">
+            <h2>Age / Pay Ratio</h2>
+        </div>
+    </div>
+    <!---------- /Intro and first 3 graphs---------->
+    
+    
+    <!---------- Last 3 graphs---------->
+    <div class="graphContainerTwo">
+        <div id="maritalRatio" class="graphDiv maritalStacked">
+            <h2>Male / Female Marital Status</h2>
+        </div>
+        <div id="genderPayRatio" class="graphDiv payBar">
+            <h2>Male / Female Total Pay Ratio</h2>
+        </div>
+        <div id="genderJobRatio" class="graphDiv jobStacked">
+            <h2>Male / Female Jobtype Ratio</h2>
+        </div>
+        <div id="employmentRatio" class="graphDiv employmentPie">
+            <h2>Employment Status Ratio</h2>
+        </div>
+    </div>
+    <!----------/Last 3 graphs---------->
 </body>
 
 </html>
