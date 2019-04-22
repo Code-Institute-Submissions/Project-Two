@@ -75,7 +75,7 @@ function maleFemale_Ratio(ndx) {
         .yAxis().ticks(10);
 }
 
-// gender pay ratio pie chart
+// gender pay pie chart
 function maleFemalePay_Ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
@@ -91,6 +91,9 @@ function maleFemalePay_Ratio(ndx) {
         .transitionDuration(1500)
         .dimension(dim)
         .group(payRatio)
+        .valueAccessor(function(d) {
+            return d.value.toFixed(2);
+        })
         .colorAccessor(function(d) {
             return d.key[2];
         })
@@ -110,7 +113,7 @@ function EmploymentStatus_Ratio(ndx) {
         .group(group);
 }
 
-//gender job type ratio stacked bar chart
+//gender job type stacked bar chart
 function maleFemaleJobtype_Ratio(ndx) {
 
     function RatioByGender(dimension, Department) {
@@ -152,7 +155,8 @@ function maleFemaleJobtype_Ratio(ndx) {
         .stack(JobRatioExecutive, 'Executive Office')
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
-                return (d.value.match / d.value.total) * 100;
+                var total = (d.value.match / d.value.total) * 100;
+                return total;
             }
             else {
                 return 0;
@@ -164,7 +168,7 @@ function maleFemaleJobtype_Ratio(ndx) {
         .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
-//marital status ratio stacked bar chart
+//marital status stacked bar chart
 function maleFemaleMarital_Ratio(ndx) {
 
     function RatioByStatus(dimension, MaritalDesc) {
@@ -219,7 +223,7 @@ function maleFemaleMarital_Ratio(ndx) {
         .margins({ top: 10, right: 140, bottom: 30, left: 30 });
 }
 
-// gender age to pay ratio scatter graph
+// gender age to pay scatter graph
 function age_pay_ratio(ndx) {
     var genderColors = d3.scale.ordinal()
         .domain(['Female', 'Male'])
@@ -244,7 +248,7 @@ function age_pay_ratio(ndx) {
         .yAxisLabel('Pay Hourly Rate')
         .xAxisLabel('Age')
         .title(function(d) {
-            return 'earned' + d.key[1];
+            return 'Hourly Rate = ' + d.key[1];
         })
         .colorAccessor(function(d) {
             return d.key[2];
