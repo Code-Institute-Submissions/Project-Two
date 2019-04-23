@@ -20,3 +20,8 @@
     text-align: center;
     line-height: 150%;
 }
+
+@mixin description {
+    font-size: 13px;
+    color: grey;
+}
