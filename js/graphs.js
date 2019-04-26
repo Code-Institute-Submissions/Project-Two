@@ -212,11 +212,13 @@ function maleFemaleMarital_Ratio(ndx) {
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
                 return (d.value.match / d.value.total) * 100;
+                
             }
             else {
                 return 0;
             }
         })
+        .title(function(d) { return "Value: " + d.value; })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(300).y(20).itemHeight(15).gap(5))
@@ -231,7 +233,7 @@ function age_pay_ratio(ndx) {
 
     var AgeDim = ndx.dimension(dc.pluck('Age'));
     var payDim = ndx.dimension(function(d) {
-        return [d.Age, d.PayRate, d.Sex];
+        return [d.Age, d.PayRate, d.Sex, d.Department];
     });
     var AgeToPayGroup = payDim.group();
 
@@ -248,7 +250,7 @@ function age_pay_ratio(ndx) {
         .yAxisLabel('Pay Hourly Rate')
         .xAxisLabel('Age')
         .title(function(d) {
-            return 'Hourly Rate = ' + d.key[1];
+            return 'Employee Department : ' + d.key[3];
         })
         .colorAccessor(function(d) {
             return d.key[2];
