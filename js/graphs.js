@@ -156,7 +156,7 @@ function maleFemaleJobtype_Ratio(ndx) {
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
                 var total = (d.value.match / d.value.total) * 100;
-                total = total.toFixed(2);
+                total = total.toFixed(0);
                 
                 return parseFloat(total);
             }
@@ -214,7 +214,7 @@ function maleFemaleMarital_Ratio(ndx) {
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
                 var total = (d.value.match / d.value.total) * 100;
-                total = total.toFixed(2);
+                total = total.toFixed(0);
                 
                 return parseFloat(total);
             }
