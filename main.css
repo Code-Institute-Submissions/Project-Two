@@ -54,9 +54,9 @@ h3 {
   order: 2;
   flex: 1; }
 
-.ageScatter {
+.employmentPie {
   order: 3;
-  flex: 2; }
+  flex: 1; }
 
 .graphContainerTwo {
   display: flex;
@@ -67,16 +67,12 @@ h3 {
   order: 1;
   flex: 1; }
 
-.payBar {
-  order: 3;
-  flex: 1; }
+.ageScatter {
+  order: 2;
+  flex: 2; }
 
 .jobStacked {
   order: 3;
-  flex: 2; }
-
-.employmentPie {
-  order: 4;
   flex: 1; }
 
 @media (max-width: 320px) {
