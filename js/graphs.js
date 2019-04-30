@@ -156,7 +156,9 @@ function maleFemaleJobtype_Ratio(ndx) {
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
                 var total = (d.value.match / d.value.total) * 100;
-                return total;
+                total = total.toFixed(2);
+                
+                return parseFloat(total);
             }
             else {
                 return 0;
@@ -211,14 +213,18 @@ function maleFemaleMarital_Ratio(ndx) {
         .stack(MarrigeRatioWidowed, 'widowed')
         .valueAccessor(function(d) {
             if (d.value.total > 0) {
-                return (d.value.match / d.value.total) * 100;
+                var total = (d.value.match / d.value.total) * 100;
+                total = total.toFixed(2);
                 
+                return parseFloat(total);
             }
             else {
                 return 0;
             }
         })
-        .title(function(d) { return "Value: " + d.value; })
+        // .title(function(d) {
+        //     return d.value.average;
+        // })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(300).y(20).itemHeight(15).gap(5))
