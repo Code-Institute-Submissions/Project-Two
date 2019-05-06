@@ -42,22 +42,39 @@ I believe all of the features I have chosen to implement within the project have
 ## Existing features
 
 1. **Dropdown Boxes**
+
+* Placed within the very top of the dashboard within the introduction div, the user is presented with a selection of dropdown boxes. These boxes can be used to alter the charts to display personalized data specific to the user. The function of these dropdown boxes are defined within the text above and they are all labelled with specific titles to show the user what exactly they can alter. The three boxes can successfully alter the data by filtering in accordance to gender, employee department and race. This results in a very powerful feature which almost all users will take advantage of, regardless of their intentions. This creates a positive user experience which is always great.
+ 
 2. **Tooltip Hover Statistics**
-3. **Media Query Responsivness**
-4. **Chart Click Functionality**
-5. **External Linking To Source File**
-6. **Flexbox Positioning**
+
+* The information about this feature is again provided within the introduction div of the dashboard, a place every user will be again to scan quickly and see what is available for them to take advantage of. This feature allows a user to hover over any section of any chat within the dashboard and be presented with highly accurate data of which that section represents. For example on the gender comparison bar chart; from first glance you can see there are more Female employees than Male, however if you hover over each section you can see the specific numbers 174 and 127. This allows users to see accurate numerical results which is way more powerful compared to ‘which bar is the highest’. When the hover statistics are based on a percentage of a whole, this is explained within the same div as its chart, meaning no user will be confused or get misled by any data provided.
+
+3. **External Linking To Source File**
+
+* This feature caters more towards professional users of the dashboard looking to research the topic in more detail. Within the introduction div of the project a sentence standing by itself states ‘To further study this topic please visit Here’, the link opens a new tab on the users device and opens the ‘Kaggle’ page for the dataset used for the project. This page has a multitude of new topics of data for Dental Magic to be researched and a community of users willing to share ideas. This is great for users who want to dive deeper into the topic, and will create a positive impact back on to the project dashboard.
+
+4. **Flexbox Positioning**
+
+* Throughout the dashboard I have used Flexbox for the positioning and responsiveness for all divs on the page. This has allowed me to create a dashboard suitable for any device without compromising the layout style or quality of the page. There are always constant margins separating each div equally on all side which is a result of flexbox, giving users a clean minimalistic style to appreciate and take advantage of. A user could view the page on a laptop, followed by an IPod and then even a small mobile device and the dashboard will work perfectly on all, this is an amazing feature which was easy to implement thanks to flexbox for the most part. This is extremely powerful as d3 itself does not support small devices however using flexbox this is not an issue.
+ 
 
 ## Left to implement
 
 1. **Time Period Based Charts**
 
+* When looking at future plan for the dashboard, I am planning to include a lot more charts which display data relating to specific time periods. This can be visualised for a user using charts such as line graphs and composite charts. This will add a unique perspective for a user and will definitely be a positive addition for all target groups to use. 
+ 
+
 ## Technologies used
 
-1. **HTML**
-2. **CSS**
-3. **SASS**
-4. **Google Fonts**
+1. **HTML** - https://www.w3.org/
+* HTML was used to create the foundation of the website. All content on the website was created with hypertext markup language. This includes for example headings, links, descriptions, dropdown boxes, divs and more. 
+2. **CSS** - https://www.w3.org/Style/CSS/Overview.en.html
+* Although the CSS within this project was actually compiled and processed using Sass (described below), the CSS provides all styling throughout the project. Without this the page will be very standard and not worthy of deployment. This styling is linked through an external style sheet and is linked through the head section of the index file. 
+3. **SASS** - https://sass-lang.com/
+* Sass was used to great styling for the page which was then compiled into CSS. Many features of Sass make it a more very effective and efficient way of styling compared to normal CSS. I used several partials to separate styling groups, along with variables and mixins to create rules to call at any time.
+4. **Google Fonts** - https://fonts.google.com/
+* Google fonts were used to receive professional style fonts for the page. They provide a huge catalogue of fonts suitable for any style and theme. The clear example on my project would be to change in font from each divs title to brief description. The main fonts used on the project would be 'ZCOOL XiaoWei’ and 'Russo One'.
 5. **JavaScript**
 6. **Dc.js**
 7. **D3.js**
