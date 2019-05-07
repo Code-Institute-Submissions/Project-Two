@@ -75,8 +75,32 @@ I believe all of the features I have chosen to implement within the project have
 * Sass was used to great styling for the page which was then compiled into CSS. Many features of Sass make it a more very effective and efficient way of styling compared to normal CSS. I used several partials to separate styling groups, along with variables and mixins to create rules to call at any time.
 4. **Google Fonts** - https://fonts.google.com/
 * Google fonts were used to receive professional style fonts for the page. They provide a huge catalogue of fonts suitable for any style and theme. The clear example on my project would be to change in font from each divs title to brief description. The main fonts used on the project would be 'ZCOOL XiaoWei’ and 'Russo One'.
-5. **JavaScript**
-6. **Dc.js**
-7. **D3.js**
-8. **Crossfilter.js**
-9. **Queue.js**
+5. **JavaScript** - https://www.javascript.com/
+* JavaScript can be perceived as the most vital language used within my project. JavaScript was used in conjunction with other JavaScript libraries to create and render all charts seen on the page along with all the specific details they provide. Without JavaScript the page would only consist of a base provided by HTML and CSS, JavaScript provides the rest! If the JavaScript was wrong, the whole dashboard would be doomed until resolved.
+6. **Dc.js** - https://dc-js.github.io/dc.js/
+* Dc.js is a JavaScript library and was used to create the data driven charts used on the page. It is used in relation to the data set I provided it. It creates an efficient solution to programmers who want to create fast and functional charts in a reliable manner.
+7. **D3.js** - https://d3js.org/
+* D3.js is another JavaScript library and was used in conjunction with Dc.js (shown above) to help render the charts. IT renders the charts visually using a combination of HTML, SVG and CSS. Again d3.js is a brilliant go-to for programmers who want to create solid charts quickly and effectively.
+8. **Crossfilter.js** - https://square.github.io/crossfilter/
+* Again Crossfilter.js is a JavaScript library and is used to explore large datasets in very rapid time. Crossfilter supports fast interaction with coordinated views and is used alongside both D3.js and Dc.js for this project.
+
+## Deployment
+
+The deployment process of this project was fairly straightforward but the method is very methodical. At the very beginning of the project workspace creation the very first task I needed to complete is to generate a git repository using the ‘git init’ command.  From there I know I have a safe place to store all of my work which I can later retrieve from anywhere. All of this was achievable through my Cloud9 workspace. 
+
+After I have created my repository and I have reached a point where I would like to save some more of my work (usually after small successes on the project), I would follow the method of reviewing the git status (using command ‘git status’) to see any untracked files needing to be added, from there I can then choose which files to save now or wait until a later date. The process of adding files to what is called a staging area is fairly simple, all I needed to do was use the command ‘git add ____’ (blank being the specific files I would like to add), and press enter. Once I am happy with the files I would like to save to the git repository, I would then send the command ‘git commit –m’ with a specific message which I (and other programmers) can then use at a later date to distinguish the changes I have made, and again press enter.
+
+The files are then stored safely and are ready to be ‘pushed’ when I believe they are at a good enough level to be deployed. First however I needed to create a remote repository on Github, this means my workspace can be stored online ready to be deployed and for other contributors to see and edit. I do this by simply following the simple instructions provided by Github, once completed I pushed my work using ‘git push’ followed by my personal Github login details.
+
+Finally at this point I hosted my work online using ‘Github pages’, I then received a domain link which the project is then hosted to. This is then my deployed version of my project.  I can still edit my own development code which is still saved to my own private workspace. I use this to edit, upgrade, and test all areas of the project safely while the deployed version stays the same. Once I am happy with an upgrade and I want to apply these to the deployed version, all I need to do is follow the same process as before. Once the new code is pushed onto the remote repository the deployed version is then upgraded for the public to use.
+
+## Credits
+
+### Content 
+* The brief text provided within the intro div regarding the dataset of the project was based on the info given from the source file 'https://www.kaggle.com/rhuebner/human-resources-data-set'.
+
+### Media
+* No images or media files of the sort were obtained anywhere as they are not used within the project. The data for the charts however were again obtained from the dataset source file 'https://www.kaggle.com/rhuebner/human-resources-data-set'.
+
+### Acknowledgements
+* I did not recieve any specific inspiration for this project, I used my previous knowledge of data dashboards ive seen online and mouled my own ideas from there. 
