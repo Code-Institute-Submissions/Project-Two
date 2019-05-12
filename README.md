@@ -74,7 +74,7 @@ I believe all the features I have chosen to carry out within the project are con
 2. **CSS** - https://www.w3.org/Style/CSS/Overview.en.html
 * Although the CSS within this project was actually compiled and processed using Sass (described below), the CSS provides all styling throughout the project. Without this, the page will be very standard and not worthy of deployment. This styling was linked through an external style sheet and was linked through the head section of the index file.
 3. **SASS** - https://sass-lang.com/
-* Sass is used to great styling for the page which was then compiled into CSS. Many features of Sass make it a more very effective and efficient way of styling compared to normal CSS. I used several partials to separate styling groups, along with variables and mixins to create rules to call at any time.
+* Sass is used to create great styling for the page which was then compiled into CSS. Many features of Sass make it a more very effective and efficient way of styling compared to normal CSS. I used several partials to separate styling groups, along with variables and mixins to create rules to call at any time.
 4. **Google Fonts** - https://fonts.google.com/
 * Google fonts are used to receive professional style fonts for the page. They offer a huge catalog of fonts suitable for any style and theme. The clear example on my project would be the change in the font from each divs title to the brief description. The main fonts used on the project would be 'ZCOOL XiaoWei’ and 'Russo One’.
 5. **JavaScript** - https://www.javascript.com/
@@ -98,7 +98,7 @@ Finally at this point, I hosted my work online using ‘Github pages’, I then 
 
 ## Testing
 
-Testing is always an absolutely essential aspect of any project as without thorough testing, you look yourself and your project wide open for mistakes, user complaints and a lack of appreciation for your hard work.
+Testing is always an absolutely essential aspect of any project as without thorough testing, you leave yourself and your project wide open for mistakes, user complaints and a lack of appreciation for your hard work.
 
 Naturally during the testing processes of my project, I met several little bugs along the way which needed to be resolved before carrying on. I believe a developer can never be too careful when testing for errors as a deployed website full of errors can be disastrous. Due to this reason I ensured I spent enough time finding and fixing errors before any of my code was even considered for deployment.
 
@@ -108,8 +108,8 @@ I have listed the user stories below and will explain how I have catered for eac
 
 #### As a general user, I want to be able to clearly understand what is shown to me at first glance so I don’t have to do any further research.
 * This user story was absolutely vital because a user NEEDS to know what is going on within a split second, a humans attention span is not great (especially if they are only browsing) so I needed to make sure a user can visit the project and immediately know what was being shown to them.
-* As a result of this, I created a large page title of ‘Dental Magic basic Employee History’ which quickly summarises the content within the page, this title is also placed as usual at the very top of the page and is displayed in a large thick black font which naturally ensures it is the first thing a user will read; this will give a good overview before they dive deeper.
-* The next step I took to make sure a user knows exactly what they are looking at immediately is another large heading is sat at the top of each div containing a chart, the title is a very brief sentence which nicely explains what the chart represents, such as I have used ‘Employee gender Comparison’ and ‘Employee Current Employment Status’ which are very self-explanatory. If a user spots a chart that he/she may be interested in, I have also placed another explanation underneath the title which states how best to use the chart and how exactly the data could be interpreted.  
+* As a result of this, I created a large page title of ‘Dental Magic Basic Employee History’. This quickly summarises the content within the page, this title is also placed as usual at the very top of the page and is displayed in a large thick black font which naturally ensures it is the first thing a user will read; this will give a good overview before they dive deeper.
+* The next step I took to make sure a user knows exactly what they are looking at immediately is another large heading is sat at the top of each div containing a chart, the title is a very brief sentence which nicely explains what the chart represents, such as I have used ‘Employee Gender Comparison’ and ‘Employee Current Employment Status’ which are very self-explanatory. If a user spots a chart that he/she may be interested in, I have also placed another explanation underneath the title which states how best to use the chart and how exactly the data could be interpreted.  
 
 #### As a professional user, I want to be able to gain extra information so I can carry out further research if needed.
 * This user story as mentioned above caters more towards the professional user or anyone who wants to investigate this data in above average detail. This is always important as I understand that this target group factors in a large percentage of users.
@@ -142,4 +142,4 @@ I met a couple of bugs along the way which needed addressing before the project 
 * No images or media files of the sort were obtained anywhere as they are not used within the project. The data for the charts however were again obtained from the dataset source file 'https://www.kaggle.com/rhuebner/human-resources-data-set'.
 
 ### Acknowledgements
-* I did not recieve any specific inspiration for this project, I used my previous knowledge of data dashboards ive seen online and mouled my own ideas from there. Along the process I recieced help from my college mentor in terms of improvments and ideas. 
+* I did not recieve any specific inspiration for this project, I used my previous knowledge of data dashboards I have seen online and moulded my own ideas from there. Along the process I recieved help from my college mentor in terms of improvements and ideas. 
