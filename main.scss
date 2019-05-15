@@ -20,6 +20,7 @@ h1 {
 p {
     @include introFont;
 }
+
 h3 {
     @include description;
 }
@@ -32,6 +33,9 @@ h3 {
     flex-basis: 25%;
     margin: 10px;
     padding: 5px;
+    -webkit-box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.75);
 }
 
 .selectorContainer {
@@ -54,6 +58,7 @@ h3 {
     order: 2;
     flex: 1;
 }
+
 .employmentPie {
     order: 3;
     flex: 1;
@@ -71,6 +76,7 @@ h3 {
     flex: 1;
 
 }
+
 .ageScatter {
     order: 2;
     flex: 2;
