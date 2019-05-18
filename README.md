@@ -133,6 +133,7 @@ This was used along with my sass media queries in which I have edited the dashbo
 
 I met a couple of bugs along the way which needed addressing before the project was acceptable to be deployed; an example of this is as mentioned above as dc.js does not by default support screen sizes below the average desktop. This means a huge majority of the target users would be lost as they may be using smartphones or Ipads for example. The fix for this problem was fairly easy as using media queries I was able to create specific breakpoints where the dashboard will automatically change when they are hit. In this specific example once the screen size drops below 425px a feature will appear which will let users scroll left and right within each div containing a chart. This means they can still view all the data provided within the chart even though the screen size drops massively. This is a nice feature which increases user experience by a considerable amount.
 
+Another issue I came across when building the project was that I initially used Bootstrap for layout and positioning before overriding this using flexbox. The reason I ended up choosing flexbox was during the period of using Bootstrap, I was unable to easily create equal padding between each div on all four sides while also creating a responsive dashboard. After understanding flexbox had this functionality built in, it was extremely easy for me to achieve this goal and as a result the dashboard looks very clean and also responds to device size very well.  
 ## Credits
 
 ### Content 
