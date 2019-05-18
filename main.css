@@ -71,8 +71,8 @@ h3 {
   flex: 1; }
 
 .ageScatter {
-  order: 2;
-  flex: 2; }
+  order: 3;
+  flex: 1; }
 
 .jobStacked {
   order: 3;
@@ -87,10 +87,29 @@ h3 {
 @media (min-width: 376px) and (max-width: 425px) {
   body {
     text-align: center; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  body {
+    text-align: center; } }
 
 @media (max-width: 320px) {
   h1 {
     font-size: 190%; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  h1 {
+    font-size: 250%; } }
+
+@media (max-width: 320px) {
+  p {
+    font-size: 80%; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  p {
+    font-size: 80%; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  p {
+    font-size: 80%; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  p {
+    font-size: 80%; } }
 
 @media (max-width: 320px) {
   .graphDiv {
@@ -107,6 +126,11 @@ h3 {
     padding: 3px;
     overflow-x: scroll;
     width: 90%; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  .graphDiv {
+    padding: 3px;
+    width: 95%;
+    overflow-x: scroll; } }
 
 @media (max-width: 320px) {
   .graphContainer {
@@ -115,6 +139,9 @@ h3 {
   .graphContainer {
     flex-direction: column; } }
 @media (min-width: 376px) and (max-width: 425px) {
+  .graphContainer {
+    flex-direction: column; } }
+@media (min-width: 426px) and (max-width: 768px) {
   .graphContainer {
     flex-direction: column; } }
 
@@ -125,6 +152,9 @@ h3 {
   .graphContainerTwo {
     flex-direction: column; } }
 @media (min-width: 376px) and (max-width: 425px) {
+  .graphContainerTwo {
+    flex-direction: column; } }
+@media (min-width: 426px) and (max-width: 768px) {
   .graphContainerTwo {
     flex-direction: column; } }
 

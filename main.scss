@@ -78,8 +78,8 @@ h3 {
 }
 
 .ageScatter {
-    order: 2;
-    flex: 2;
+    order: 3;
+    flex: 1;
 }
 
 .jobStacked {
@@ -103,11 +103,32 @@ body {
     @include smartphoneLarge {
         text-align: center;
     }
+    @include tablet {
+        text-align: center;
+    }
 }
 
 h1 {
     @include smartphone {
         font-size: 190%;
+    }
+    @include tablet {
+        font-size: 250%;
+    }
+}
+
+p {
+    @include smartphone {
+        font-size: 80%;
+    }
+    @include smartphoneMedium {
+        font-size: 80%;
+    }
+    @include smartphoneLarge {
+        font-size: 80%;
+    }
+    @include tablet {
+        font-size: 80%;
     }
 }
 
@@ -128,6 +149,11 @@ h1 {
         overflow-x: scroll;
         width: 90%;
     }
+    @include tablet {
+        padding: 3px;
+        width: 95%;
+        overflow-x: scroll;
+    }
 }
 
 .graphContainer {
@@ -140,6 +166,9 @@ h1 {
     @include smartphoneLarge {
         flex-direction: column;
     }
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .graphContainerTwo {
@@ -150,6 +179,9 @@ h1 {
         flex-direction: column;
     }
     @include smartphoneLarge {
+        flex-direction: column;
+    }
+    @include tablet {
         flex-direction: column;
     }
 }
